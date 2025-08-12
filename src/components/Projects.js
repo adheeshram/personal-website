@@ -24,7 +24,7 @@ const projects = [
   },
   {
     title: "Personal Portfolio Website",
-    tech: "React · JavaScript · HTML · CSS",
+    tech: "React",
     description:
       "Developed this responsive personal portfolio website to showcase projects, internship experience, and contact information. Implemented smooth scroll animations, interactive UI components using React hooks, and integrated social links and an embedded resume for easy access.",
     github: "",
