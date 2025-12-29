@@ -4,6 +4,8 @@ export default function Work() {
   return (
     <section id="work" className="fade-in">
       <h2>Where I’ve Worked</h2>
+
+      {/* Shining Mindz */}
       <div className="work-entry">
         <a href="https://shiningmindz.com" target="_blank" rel="noopener noreferrer">
           <img
@@ -31,6 +33,27 @@ export default function Work() {
           </p>
         </div>
       </div>
+
+      {/* Plano West Robotics */}
+      <div className="work-entry">
+        <img
+          src={process.env.PUBLIC_URL + "/robotics-logo.png"}
+          alt="Plano West Robotics"
+          className="company-logo"
+        />
+        <div className="work-info">
+          <h3>Plano West Robotics Team</h3>
+          <h4>Robotics Engineer</h4>
+          <p className="work-dates">August 2025 – May 2026</p>
+          <p>
+            Worked on a competitive robotics team designing and refining mechanical systems for UIL
+            competitions. Focused on building reliable mechanisms, coordinating actuation systems,
+            and collaborating closely during testing and iteration to improve overall robot
+            performance.
+          </p>
+        </div>
+      </div>
+
     </section>
   );
 }
