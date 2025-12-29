@@ -28,11 +28,11 @@ const projects = [
     demoLinks: [
       {
         label: "Photo",
-        url: "/robot-photo.png",
+        url: process.env.PUBLIC_URL + "/robot-photo.png",
       },
       {
         label: "Video",
-        url: "/robot-video.mov",
+        url: process.env.PUBLIC_URL + "/robot-video.mov",
       },
     ],
     thumbnail: vexThumb,
@@ -53,11 +53,11 @@ const projects = [
     demoLinks: [
       {
         label: "Demo 1",
-        url: "/owl.mp4",
+        url: process.env.PUBLIC_URL + "/owl.mp4",
       },
       {
         label: "Demo 2",
-        url: "/cookie-machine.mp4",
+        url: process.env.PUBLIC_URL + "/cookie-machine.mp4",
       },
     ],
     thumbnail: vex2Thumb,
