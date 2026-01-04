@@ -1,5 +1,5 @@
 import React from "react";
-
+import sensorFusionThumb from "../assets/sensor-fusion-thumbnail.png";
 import visionThumb from "../assets/vision-glasses-thumbnail.png";
 import vexThumb from "../assets/vex-robotics-thumbnail.png";
 import reactThumb from "../assets/react.png";
@@ -8,7 +8,7 @@ import vex2Thumb from "../assets/vex-robotics-thumbnail-2.png";
 
 const projects = [
   {
-    title: "GestureCanvas",
+    title: "GestureCanvas - AI Hand Gesture Drawing System",
     tech: "Arduino · Python · Computer Vision",
     description:
       "Created an AI-powered hand gesture drawing and recognition system using Python that converts real-time hand movements into digital drawings. Developing a research board with experimental trials, data analysis, and graphs to evaluate accuracy and performance.",
@@ -19,6 +19,14 @@ const projects = [
       },
     ],
     thumbnail: gestureThumb,
+  },
+  {
+  title: "Autonomous Sensor Fusion Navigation System",
+  tech: "Arduino · C++ · Embedded Systems ",
+  description:
+    "Developed an embedded navigation system using multiple sensors with real-time obstacle detection and sensor fusion for reliable performance under noisy conditions. Optimized C++ algorithms on microcontroller hardware and tested across repeated trials to ensure stable autonomous responses.",
+  github: "https://github.com/adheeshram/Autonomous-Sensor-Fusion-Navigation-System",
+  thumbnail: sensorFusionThumb,
   },
   {
     title: "FTC Competition Robot",
@@ -32,7 +40,7 @@ const projects = [
       },
       {
         label: "Video",
-        url: process.env.PUBLIC_URL + "/robot-video.mov",
+        url: process.env.PUBLIC_URL + "/robot-video.mp4",
       },
     ],
     thumbnail: vexThumb,
