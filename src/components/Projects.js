@@ -1,7 +1,7 @@
 import React from "react";
 
 import visionThumb from "../assets/vision-glasses-thumbnail.png";
-import vexThumb from "../assets/vex-robotics-thumbnail.jpg";
+import vexThumb from "../assets/vex-robotics-thumbnail.png";
 import vex2Thumb from "../assets/vex-robotics-thumbnail-2.png";
 import gestureThumb from "../assets/gesture-canvas-thumbnail.png";
 import autonomousThumb from "../assets/sensor-fusion-thumbnail.png";
@@ -24,6 +24,17 @@ const projects = [
       "Developed a multi-sensor autonomous navigation system that detects obstacles and triggers autonomous responses. Optimized C++ code for low-latency performance on resource-limited microcontrollers.",
     github: "https://github.com/adheeshram/autonomous-sensor-fusion",
     thumbnail: autonomousThumb,
+  },
+  {
+    title: "PLTW Digital Electronics Projects",
+    tech: "Digital Logic · State Machines · Ripple Counters",
+    description:
+      "Built and tested digital logic circuits in PLTW Digital Electronics, including ripple counters and finite state machines. Designed, simulated, and validated behavior through both Tinkercad and breadboard implementations.",
+    demoLinks: [
+      { label: "Schematic Example", url: process.env.PUBLIC_URL + "/pltw-de-example1-tinkercad.png" },
+      { label: "Breadboard Example", url: process.env.PUBLIC_URL + "/pltw-de-example1-breadboard.mp4" },
+    ],
+    thumbnail: process.env.PUBLIC_URL + "/pltw-de-thumbnail.png",
   },
   {
     title: "FTC Competition Robot",
