@@ -7,7 +7,7 @@ export default function About() {
       <h2>About Me</h2>
       <div className="about-container">
         <div className="about-text">
-          <p>
+          <p className="about-intro">
             Hi, I'm Adheesh Ramanath, a junior at Plano West High School passionate about technology, engineering, and AI. I enjoy solving challenges and creating innovative solutions.
           </p>
           <p className="quote">"The best way to predict the future is to invent it." – Alan Kay</p>

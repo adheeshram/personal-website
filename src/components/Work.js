@@ -54,6 +54,32 @@ export default function Work() {
         </div>
       </div>
 
+      {/* iCode */}
+      <div className="work-entry">
+        <a href="https://icodeschool.com" target="_blank" rel="noopener noreferrer">
+          <img
+            src={process.env.PUBLIC_URL + "/icode-logo.png"}
+            alt="iCode Logo"
+            className="company-logo"
+          />
+        </a>
+        <div className="work-info">
+          <a
+            href="https://icodeschool.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="company-name-link"
+          >
+            <h3>iCode</h3>
+          </a>
+          <h4>Programming Instructor</h4>
+          <p className="work-dates">March 2026 – May 2026</p>
+          <p>
+            Programming Instructor at iCode, teaching students the fundamentals of coding, computational thinking, and problem-solving. Guide learners through hands-on projects in programming and technology while helping them build confidence in STEM. Focus on making complex technical concepts understandable and engaging for younger students.
+          </p>
+        </div>
+      </div>
+
     </section>
   );
 }

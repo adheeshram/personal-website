@@ -1,47 +1,38 @@
 import React from "react";
-import sensorFusionThumb from "../assets/sensor-fusion-thumbnail.png";
+
 import visionThumb from "../assets/vision-glasses-thumbnail.png";
-import vexThumb from "../assets/vex-robotics-thumbnail.png";
-import reactThumb from "../assets/react.png";
-import gestureThumb from "../assets/gesture-canvas-thumbnail.png";
+import vexThumb from "../assets/vex-robotics-thumbnail.jpg";
 import vex2Thumb from "../assets/vex-robotics-thumbnail-2.png";
+import gestureThumb from "../assets/gesture-canvas-thumbnail.png";
+import autonomousThumb from "../assets/sensor-fusion-thumbnail.png";
 
 const projects = [
   {
-    title: "GestureCanvas - AI Hand Gesture Drawing System",
+    title: "GestureCanvas",
     tech: "Arduino · Python · Computer Vision",
     description:
-      "Created an AI-powered hand gesture drawing and recognition system using Python that converts real-time hand movements into digital drawings. Developing a research board with experimental trials, data analysis, and graphs to evaluate accuracy and performance.",
+      "Created an AI-powered hand gesture drawing system converting real-time movements into digital art. Built a full science fair board with trials and data analysis for accuracy and performance.",
     demoLinks: [
-      {
-        label: "Research Board (In Progress)",
-        url: "https://coming-soon",
-      },
+      { label: "Research Board (In Progress)", url: "https://coming-soon" },
     ],
     thumbnail: gestureThumb,
   },
   {
-  title: "Autonomous Sensor Fusion Navigation System",
-  tech: "Arduino · C++ · Embedded Systems ",
-  description:
-    "Developed an embedded navigation system using multiple sensors with real-time obstacle detection and sensor fusion for reliable performance under noisy conditions. Optimized C++ algorithms on microcontroller hardware and tested across repeated trials to ensure stable autonomous responses.",
-  github: "https://github.com/adheeshram/Autonomous-Sensor-Fusion-Navigation-System",
-  thumbnail: sensorFusionThumb,
+    title: "Autonomous Sensor Fusion Navigation System",
+    tech: "Arduino · C++ · Embedded Systems",
+    description:
+      "Developed a multi-sensor autonomous navigation system that detects obstacles and triggers autonomous responses. Optimized C++ code for low-latency performance on resource-limited microcontrollers.",
+    github: "https://github.com/adheeshram/autonomous-sensor-fusion",
+    thumbnail: autonomousThumb,
   },
   {
     title: "FTC Competition Robot",
     tech: "VEX Robotics · C++",
     description:
-      "Worked with a team to design and build a competition robot capable of intaking, sorting, and scoring colored game elements using coordinated motors, servos, and sensors. Focused on precise timing, mechanical reliability, and consistent autonomous and driver-controlled performance in competitive matches.",
+      "Designed and built a robot capable of intaking, sorting, and scoring colored game elements using coordinated motors, servos, and sensors. Ensured precise timing, mechanical reliability, and consistent autonomous and driver-controlled performance.",
     demoLinks: [
-      {
-        label: "Photo",
-        url: process.env.PUBLIC_URL + "/robot-photo.png",
-      },
-      {
-        label: "Video",
-        url: process.env.PUBLIC_URL + "/robot-video.mp4",
-      },
+      { label: "Photo", url: process.env.PUBLIC_URL + "/robot-photo.png" },
+      { label: "Video", url: process.env.PUBLIC_URL + "/robot-video.mp4" },
     ],
     thumbnail: vexThumb,
   },
@@ -49,7 +40,7 @@ const projects = [
     title: "Vision Assistance System",
     tech: "Arduino · C++",
     description:
-      "Developed assistive smart glasses using Arduino and C++ that detect nearby obstacles and provide real-time audio feedback. Designed and tested the system to improve spatial awareness and support hands-free navigation for visually impaired users.",
+      "Built smart glasses that detect obstacles and provide audio feedback in real-time, improving spatial awareness for visually impaired users.",
     github: "https://github.com/adheeshram/vision-assistance-glasses",
     thumbnail: visionThumb,
   },
@@ -57,25 +48,12 @@ const projects = [
     title: "VEX Robotics Projects",
     tech: "VEX Robotics · C++",
     description:
-      "Engineered and programmed VEX robotics systems in C++ utilizing motor controllers and sensor integration. Developed an owl robot with PID-controlled head rotation using feedback loops, and designed an automated cookie dispenser with synchronized motor control and sensor-triggered sequences to ensure repeatable accuracy and timing.",
+      "Engineered and programmed VEX robots including an owl robot with PID-controlled head rotation and an automated cookie dispenser with synchronized motor control for precise, repeatable performance.",
     demoLinks: [
-      {
-        label: "Demo 1",
-        url: process.env.PUBLIC_URL + "/owl.mp4",
-      },
-      {
-        label: "Demo 2",
-        url: process.env.PUBLIC_URL + "/cookie-machine.mp4",
-      },
+      { label: "Demo 1", url: process.env.PUBLIC_URL + "/owl.mp4" },
+      { label: "Demo 2", url: process.env.PUBLIC_URL + "/cookie-machine.mp4" },
     ],
     thumbnail: vex2Thumb,
-  },
-  {
-    title: "Personal Portfolio Website",
-    tech: "React",
-    description:
-      "Developed a responsive personal portfolio website to showcase engineering projects, internship experience, and technical skills. Implemented component-based architecture, smooth scroll animations, and interactive UI elements using React.",
-    thumbnail: reactThumb,
   },
 ];
 
@@ -83,22 +61,19 @@ export default function Projects() {
   return (
     <section id="projects" className="fade-in">
       <h2>My Projects</h2>
-
-      {projects.map((project, index) => (
-        <div key={index} className="project-card">
-          <div className="project-thumb-wrapper">
-            <img
-              src={project.thumbnail}
-              alt={project.title}
-              className="project-thumb"
-            />
-          </div>
-
-          <div className="project-info">
+      <div className="project-grid">
+        {projects.map((project, index) => (
+          <div key={index} className="project-card">
+            <div className="project-thumb-wrapper">
+              <img
+                src={project.thumbnail}
+                alt={project.title}
+                className="project-thumb"
+              />
+            </div>
             <h3>{project.title}</h3>
             <p className="tech-used">{project.tech}</p>
             <p>{project.description}</p>
-
             <div className="project-links">
               {project.github && (
                 <a
@@ -109,24 +84,21 @@ export default function Projects() {
                   GitHub
                 </a>
               )}
-
               {project.demoLinks &&
                 project.demoLinks.map((link, i) => (
-                  <React.Fragment key={i}>
-                    <a
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {link.label}
-                    </a>
-                    {i < project.demoLinks.length - 1 && " | "}
-                  </React.Fragment>
+                  <a
+                    key={i}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label}
+                  </a>
                 ))}
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 }
