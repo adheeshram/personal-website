@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/personal-website/static/css/main.c3312c25.css",
-    "main.js": "/personal-website/static/js/main.af60c940.js",
+    "main.js": "/personal-website/static/js/main.7336751e.js",
     "static/js/453.438d9e50.chunk.js": "/personal-website/static/js/453.438d9e50.chunk.js",
     "static/media/vision-glasses-thumbnail.png": "/personal-website/static/media/vision-glasses-thumbnail.89f913fd9e9b1138b472.png",
     "static/media/gesture-canvas-thumbnail.png": "/personal-website/static/media/gesture-canvas-thumbnail.83df837cfc5effd3f894.png",
+    "static/media/vex-robotics-thumbnail.png": "/personal-website/static/media/vex-robotics-thumbnail.78941112a1d9af4d6247.png",
     "static/media/Adheesh_Ramanath_Picture.png": "/personal-website/static/media/Adheesh_Ramanath_Picture.3bec5d918df26f311ea6.png",
     "static/media/sensor-fusion-thumbnail.png": "/personal-website/static/media/sensor-fusion-thumbnail.266900a9ae77a6225bfa.png",
     "index.html": "/personal-website/index.html",
     "main.c3312c25.css.map": "/personal-website/static/css/main.c3312c25.css.map",
-    "main.af60c940.js.map": "/personal-website/static/js/main.af60c940.js.map",
+    "main.7336751e.js.map": "/personal-website/static/js/main.7336751e.js.map",
     "453.438d9e50.chunk.js.map": "/personal-website/static/js/453.438d9e50.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3312c25.css",
-    "static/js/main.af60c940.js"
+    "static/js/main.7336751e.js"
   ]
 }
