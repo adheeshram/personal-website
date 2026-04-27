@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="Autonomous sensor fusion thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071326"/>
+      <stop offset="0.6" stop-color="#0B1E3A"/>
+      <stop offset="1" stop-color="#1B2C6B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#60A5FA" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#F472B6" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.35 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g opacity="0.16" stroke="#93C5FD" stroke-width="1">
+    <path d="M0 120H1200 M0 240H1200 M0 360H1200 M0 480H1200 M0 600H1200"/>
+    <path d="M160 0V750 M320 0V750 M480 0V750 M640 0V750 M800 0V750 M960 0V750 M1120 0V750"/>
+  </g>
+
+  <!-- accent sweep -->
+  <path
+    d="M-40 540 C 190 430, 390 670, 610 570 S 980 430, 1280 560"
+    fill="none"
+    stroke="url(#accent)"
+    stroke-width="14"
+    stroke-linecap="round"
+    opacity="0.9"
+    filter="url(#softGlow)"
+  />
+
+  <!-- radar / fusion icon -->
+  <g transform="translate(240 150)" filter="url(#softGlow)">
+    <rect x="0" y="0" width="720" height="420" rx="44" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+
+    <g transform="translate(360 220)" fill="none" stroke="rgba(255,255,255,0.82)" stroke-width="8" stroke-linecap="round">
+      <circle r="150" opacity="0.38"/>
+      <circle r="110" opacity="0.32"/>
+      <circle r="70" opacity="0.28"/>
+      <circle r="30" opacity="0.22"/>
+      <path d="M0 0 L 145 -55" stroke="url(#accent)" stroke-width="10" opacity="0.95"/>
+      <circle cx="145" cy="-55" r="10" fill="#F472B6" stroke="none"/>
+      <circle cx="-95" cy="85" r="10" fill="#60A5FA" stroke="none" opacity="0.9"/>
+      <circle cx="40" cy="120" r="10" fill="#60A5FA" stroke="none" opacity="0.7"/>
+    </g>
+
+    <!-- small car/rover -->
+    <g transform="translate(245 305)" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M110 40 H350 C385 40, 410 65, 410 100 V120 H90 V100 C90 65, 115 40, 150 40 Z" opacity="0.9"/>
+      <path d="M160 40 L 200 10 H320 L350 40" opacity="0.9"/>
+      <circle cx="160" cy="120" r="18"/>
+      <circle cx="340" cy="120" r="18"/>
+      <path d="M245 10 V40" opacity="0.7"/>
+    </g>
+  </g>
+
+  <text x="80" y="160" fill="rgba(255,255,255,0.92)" font-size="56" font-weight="800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial">
+    Autonomous Sensor Fusion
+  </text>
+  <text x="80" y="215" fill="rgba(255,255,255,0.78)" font-size="26" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial">
+    Multi-sensor navigation + obstacle response
+  </text>
+</svg>

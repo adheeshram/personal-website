@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="FTC competition robot thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#160B0B"/>
+      <stop offset="0.6" stop-color="#3B0D1E"/>
+      <stop offset="1" stop-color="#7C2D12"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FB7185" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FBBF24" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.35 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- accent wave -->
+  <path
+    d="M-40 520 C 180 420, 380 660, 600 560 S 980 420, 1280 540"
+    fill="none"
+    stroke="url(#accent)"
+    stroke-width="14"
+    stroke-linecap="round"
+    opacity="0.9"
+    filter="url(#softGlow)"
+  />
+
+  <!-- robot card -->
+  <g transform="translate(250 150)" filter="url(#softGlow)">
+    <rect x="0" y="0" width="700" height="430" rx="44" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+
+    <!-- chassis -->
+    <g transform="translate(170 230)" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="0" y="0" width="360" height="160" rx="28"/>
+      <path d="M70 0 V-70 H290 V0" opacity="0.9"/>
+      <circle cx="70" cy="160" r="22"/>
+      <circle cx="290" cy="160" r="22"/>
+      <circle cx="20" cy="130" r="16" opacity="0.75"/>
+      <circle cx="340" cy="130" r="16" opacity="0.75"/>
+      <path d="M120 55 H240" opacity="0.75"/>
+      <path d="M120 95 H240" opacity="0.75"/>
+    </g>
+
+    <!-- intake/arm -->
+    <g transform="translate(150 210)" fill="none" stroke="url(#accent)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.95">
+      <path d="M540 170 C 600 150, 610 90, 570 60"/>
+      <path d="M570 60 L 610 30"/>
+      <path d="M565 82 L 605 52"/>
+    </g>
+
+    <!-- game elements -->
+    <g transform="translate(470 160)" opacity="0.9">
+      <circle cx="0" cy="0" r="14" fill="#FB7185"/>
+      <circle cx="44" cy="22" r="14" fill="#FBBF24"/>
+      <circle cx="12" cy="58" r="14" fill="#FB7185" opacity="0.85"/>
+    </g>
+  </g>
+
+  <text x="80" y="160" fill="rgba(255,255,255,0.92)" font-size="60" font-weight="800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial">
+    FTC Competition Robot
+  </text>
+  <text x="80" y="215" fill="rgba(255,255,255,0.78)" font-size="26" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial">
+    Intake · sort · score — consistent autonomous + driver control
+  </text>
+</svg>
