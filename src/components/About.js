@@ -4,13 +4,24 @@ import MyPhoto from "../assets/Adheesh_Ramanath_Picture.png";
 export default function About() {
   return (
     <section id="about" className="fade-in">
-      <h2>About Me</h2>
+      <h2 className="about-title">Hi, I’m Adheesh!</h2>
       <div className="about-container">
         <div className="about-text">
           <p className="about-intro">
-            Hi, I'm Adheesh Ramanath, a junior at Plano West High School passionate about technology, engineering, and AI. I enjoy solving challenges and creating innovative solutions.
+            I build at the intersection of AI, computer science, and engineering, creating technology with real-world impact.
           </p>
-          <p className="quote">"The best way to predict the future is to invent it." – Alan Kay</p>
+
+          <div className="about-actions">
+            <a className="btn btn-primary" href="#projects">
+              View Projects
+            </a>
+            <a className="btn btn-ghost" href="#resume">
+              Resume
+            </a>
+            <a className="btn btn-ghost" href="#contact">
+              Contact
+            </a>
+          </div>
         </div>
         <div className="about-photo">
           <img src={MyPhoto} alt="Adheesh Ramanath" />

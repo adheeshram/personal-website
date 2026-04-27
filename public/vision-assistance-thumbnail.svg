@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="Vision assistance system thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08111D"/>
+      <stop offset="0.55" stop-color="#0B2A4A"/>
+      <stop offset="1" stop-color="#0E7490"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#22C55E" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.35 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- accent wave -->
+  <path
+    d="M-40 520 C 180 420, 380 660, 600 560 S 980 420, 1280 540"
+    fill="none"
+    stroke="url(#accent)"
+    stroke-width="14"
+    stroke-linecap="round"
+    opacity="0.9"
+    filter="url(#softGlow)"
+  />
+
+  <!-- glasses + audio -->
+  <g transform="translate(250 150)" filter="url(#softGlow)">
+    <rect x="0" y="0" width="700" height="430" rx="44" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+
+    <g transform="translate(120 150)" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="0" y="0" width="200" height="140" rx="40"/>
+      <rect x="360" y="0" width="200" height="140" rx="40"/>
+      <path d="M200 70 C 250 40, 310 40, 360 70"/>
+      <path d="M-20 40 C 10 12, 35 0, 70 0"/>
+      <path d="M560 0 C 595 0, 620 12, 650 40"/>
+    </g>
+
+    <!-- obstacle + waves -->
+    <g transform="translate(470 270)" opacity="0.9">
+      <rect x="-10" y="40" width="110" height="14" rx="7" fill="rgba(255,255,255,0.7)"/>
+      <rect x="-10" y="70" width="150" height="14" rx="7" fill="rgba(255,255,255,0.55)"/>
+      <rect x="-10" y="100" width="190" height="14" rx="7" fill="rgba(255,255,255,0.4)"/>
+      <path d="M-40 10 C -10 -10, 10 -10, 40 10" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="round"/>
+      <path d="M-70 10 C -30 -30, 30 -30, 70 10" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" opacity="0.75"/>
+      <path d="M-95 10 C -45 -55, 45 -55, 95 10" fill="none" stroke="url(#accent)" stroke-width="6" stroke-linecap="round" opacity="0.55"/>
+    </g>
+  </g>
+
+  <text x="80" y="160" fill="rgba(255,255,255,0.92)" font-size="60" font-weight="800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial">
+    Vision Assistance System
+  </text>
+  <text x="80" y="215" fill="rgba(255,255,255,0.78)" font-size="26" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial">
+    Smart glasses + real-time obstacle audio feedback
+  </text>
+</svg>

@@ -10,19 +10,25 @@ export default function Contact() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
+          className="social-link github"
         >
-          <i className="fab fa-github"></i>
+          <i className="fab fa-github" aria-hidden="true"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/adheesh-ramanath-85522a370"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
+          className="social-link linkedin"
         >
-          <i className="fab fa-linkedin"></i>
+          <i className="fab fa-linkedin" aria-hidden="true"></i>
         </a>
-        <a href="mailto:adheeshk.ramanath@gmail.com" aria-label="Email">
-          <i className="fas fa-envelope"></i>
+        <a
+          href="mailto:adheeshk.ramanath@gmail.com"
+          aria-label="Email"
+          className="social-link email"
+        >
+          <i className="fas fa-envelope" aria-hidden="true"></i>
         </a>
       </div>
     </section>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="GestureCanvas thumbnail">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08121F"/>
+      <stop offset="0.55" stop-color="#0C2A2A"/>
+      <stop offset="1" stop-color="#134E4A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5EEAD4" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#22C55E" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.35 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- subtle dot field -->
+  <g opacity="0.16" fill="#A7F3D0">
+    <circle cx="90" cy="110" r="2"/>
+    <circle cx="170" cy="210" r="2"/>
+    <circle cx="260" cy="140" r="2"/>
+    <circle cx="350" cy="260" r="2"/>
+    <circle cx="460" cy="160" r="2"/>
+    <circle cx="560" cy="240" r="2"/>
+    <circle cx="670" cy="140" r="2"/>
+    <circle cx="780" cy="220" r="2"/>
+    <circle cx="920" cy="150" r="2"/>
+    <circle cx="1040" cy="240" r="2"/>
+    <circle cx="1120" cy="130" r="2"/>
+    <circle cx="1020" cy="520" r="2"/>
+    <circle cx="880" cy="610" r="2"/>
+    <circle cx="720" cy="560" r="2"/>
+    <circle cx="560" cy="640" r="2"/>
+    <circle cx="410" cy="590" r="2"/>
+    <circle cx="260" cy="650" r="2"/>
+  </g>
+
+  <!-- accent stroke -->
+  <path
+    d="M-40 520 C 180 420, 380 660, 600 560 S 980 420, 1280 540"
+    fill="none"
+    stroke="url(#accent)"
+    stroke-width="14"
+    stroke-linecap="round"
+    opacity="0.9"
+    filter="url(#softGlow)"
+  />
+
+  <!-- canvas card -->
+  <g transform="translate(270 160)" filter="url(#softGlow)">
+    <rect x="0" y="0" width="660" height="390" rx="42" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+    <g opacity="0.22" stroke="#99F6E4" stroke-width="1">
+      <path d="M60 90H600 M60 150H600 M60 210H600 M60 270H600 M60 330H600"/>
+      <path d="M140 60V350 M230 60V350 M320 60V350 M410 60V350 M500 60V350"/>
+    </g>
+
+    <!-- gesture trail -->
+    <path d="M140 275 C 210 165, 290 315, 360 215 S 520 185, 560 120"
+      fill="none" stroke="url(#accent)" stroke-width="12" stroke-linecap="round" opacity="0.95"/>
+
+    <!-- minimal hand icon -->
+    <g transform="translate(125 110)" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M125 240 V135"/>
+      <path d="M175 240 V110"/>
+      <path d="M225 240 V125"/>
+      <path d="M275 240 V155"/>
+      <path d="M110 240 C 75 210, 70 165, 105 145 L 135 130"/>
+      <path d="M95 240 H300 C 335 240, 360 210, 360 175 V135"/>
+    </g>
+
+    <!-- sparkles -->
+    <g transform="translate(515 85)" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.75">
+      <path d="M0 22H44"/>
+      <path d="M22 0V44"/>
+      <path d="M64 62H94"/>
+      <path d="M79 47V77"/>
+    </g>
+  </g>
+
+  <text x="80" y="160" fill="rgba(255,255,255,0.92)" font-size="64" font-weight="800" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial">
+    GestureCanvas
+  </text>
+  <text x="80" y="215" fill="rgba(255,255,255,0.78)" font-size="26" font-weight="600" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial">
+    Hand gestures → live digital art
+  </text>
+</svg>
