@@ -15,7 +15,7 @@ export default function Contact() {
           <i className="fab fa-github" aria-hidden="true"></i>
         </a>
         <a
-          href="https://www.linkedin.com/in/adheesh-ramanath-85522a370"
+          href="https://www.linkedin.com/in/adheeshramanath"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
