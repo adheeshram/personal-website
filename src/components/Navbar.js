@@ -2,10 +2,10 @@ import React, { useEffect, useMemo, useState } from "react";
 
 const NAV_ITEMS = [
   { id: "about", label: "About" },
-  { id: "work", label: "Work" },
-  { id: "projects", label: "Projects" },
+  { id: "projects", label: "Engineering" },
+  { id: "research", label: "Research" },
+  { id: "work", label: "Experience" },
   { id: "resume", label: "Resume" },
-  { id: "contact", label: "Contact" },
 ];
 
 export default function Navbar({ theme, onToggleTheme }) {
@@ -20,6 +20,8 @@ export default function Navbar({ theme, onToggleTheme }) {
       .filter(Boolean);
 
     if (sectionEls.length === 0) return;
+
+    if (!("IntersectionObserver" in window)) return;
 
     const observer = new IntersectionObserver(
       (entries) => {

@@ -1,14 +1,12 @@
 # Personal Portfolio Website
 
-This is my personal portfolio website built with React. It showcases my projects, work experience, resume, and contact information in a clean and responsive design.
+This React portfolio documents Adheesh Ramanath's research, engineering projects, work, teaching, and leadership.
 
 ## Features
 
-- Responsive layout with smooth fade-in animations on scroll  
-- Projects section with links to GitHub and demos  
-- Work experience section with company logos and descriptions  
-- Embedded resume viewer  
-- Contact section with social media and email links  
+- Responsive, accessible layout with light and dark themes
+- Research and engineering case studies with progressive disclosure
+- Project media, verified external links, and downloadable résumé
 
 ## Technologies Used
 
@@ -33,10 +31,10 @@ Make sure you have Node.js and npm installed. You can download them from [nodejs
 
 ## Deployment
 
-You can deploy this website using services like GitHub Pages, Netlify, or Vercel.
+The site uses the existing GitHub Pages workflow: `npm run deploy` builds the app and publishes the `build/` directory through `gh-pages`.
 
 ## Contact
 
 - GitHub: [https://github.com/adheeshram](https://github.com/adheeshram)  
-- LinkedIn: [https://linkedin.com/in/adheesh-ramanath-85522a370](https://linkedin.com/in/adheesh-ramanath-85522a370)  
+- LinkedIn: [https://www.linkedin.com/in/adheesh-ramanath](https://www.linkedin.com/in/adheesh-ramanath)
 - Email: adheeshk.ramanath@gmail.com

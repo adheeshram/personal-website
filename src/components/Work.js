@@ -1,85 +1,73 @@
 import React from "react";
 
 export default function Work() {
+  const entries = [
+    {
+      organization: "Shining Mindz",
+      role: "Software Development Intern",
+      period: "May–August 2025",
+      description: "Built and deployed a Python/VBA ETL pipeline that converted PowerPoint data into validated Excel reports, reducing processing time by 96%.",
+      logo: process.env.PUBLIC_URL + "/shining-mindz-logo.png",
+      url: "https://shiningmindz.com",
+    },
+    {
+      organization: "iCode",
+      role: "Paid Programming & Robotics Instructor",
+      period: "Spring–Summer 2026",
+      description: "Taught Python, Java, and robotics to 125+ students ages 7–14 and designed curricula for 15+ project-based camps.",
+      logo: process.env.PUBLIC_URL + "/icode-logo.png",
+      url: "https://icodeschool.com",
+    },
+  ];
+
+  const leadership = [
+    {
+      organization: "HornetHacks",
+      role: "Co-Founder",
+      description: "Organizing an official MLH hackathon targeting 300+ students, with technology sponsors including Google Gemini. Directing partnerships, logistics, workshops, and judging; the event is in development.",
+    },
+    {
+      organization: "Career Cartography",
+      role: "Co-Founder",
+      description: "Interviewed 15+ leaders, including Cineworld’s CEO, about entrepreneurship; created educational content reaching 50K+ viewers and led workshops for 500+ students nationwide.",
+    },
+    {
+      organization: "Habitat for Humanity Club",
+      role: "Founder & President",
+      description: "Built a 60+ member organization, raised $2K+ for affordable housing, and organized build days, service projects, fundraisers, and outreach.",
+    },
+  ];
+
   return (
     <section id="work" className="fade-in">
-      <h2>Where I’ve Worked</h2>
-
-      {/* Shining Mindz */}
-      <div className="work-entry">
-        <a href="https://shiningmindz.com" target="_blank" rel="noopener noreferrer">
-          <img
-            src={process.env.PUBLIC_URL + "/shining-mindz-logo.png"}
-            alt="Shining Mindz Logo"
-            className="company-logo"
-          />
-        </a>
-        <div className="work-info">
-          <a
-            href="https://shiningmindz.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="company-name-link"
-          >
-            <h3>Shining Mindz</h3>
-          </a>
-          <h4>Software Development Intern</h4>
-          <p className="work-dates">June 2025 – August 2025</p>
-          <p>
-            Developed automated scripts to extract and clean data from PowerPoint presentations
-            into structured Excel sheets. Implemented validation and error-checking to ensure
-            data accuracy. Improved processing speed of data extraction by 30% through optimized
-            algorithms and workflow enhancements.
-          </p>
-        </div>
+      <div className="section-heading">
+        <p className="eyebrow">Beyond the lab</p>
+        <h2>Experience & leadership</h2>
       </div>
-
-      {/* Plano West Robotics */}
-      <div className="work-entry">
-        <img
-          src={process.env.PUBLIC_URL + "/robotics-logo.png"}
-          alt="Plano West Robotics"
-          className="company-logo"
-        />
-        <div className="work-info">
-          <h3>Plano West Robotics Team</h3>
-          <h4>Robotics Engineer</h4>
-          <p className="work-dates">August 2025 – May 2026</p>
-          <p>
-            Worked on a competitive robotics team designing and refining mechanical systems for UIL
-            competitions. Focused on building reliable mechanisms, coordinating actuation systems,
-            and collaborating closely during testing and iteration to improve overall robot
-            performance.
-          </p>
-        </div>
+      <div className="work-grid">
+        {entries.map((entry) => (
+          <article className="work-entry" key={entry.organization}>
+            <a href={entry.url} target="_blank" rel="noopener noreferrer" className="company-logo-wrap" aria-label={`Visit ${entry.organization}`}>
+              <img src={entry.logo} alt="" className="company-logo" />
+            </a>
+            <div className="work-info">
+              <p className="work-dates">{entry.period}</p>
+              <h3>{entry.organization}</h3>
+              <h4>{entry.role}</h4>
+              <p>{entry.description}</p>
+            </div>
+          </article>
+        ))}
       </div>
-
-      {/* iCode */}
-      <div className="work-entry">
-        <a href="https://icodeschool.com" target="_blank" rel="noopener noreferrer">
-          <img
-            src={process.env.PUBLIC_URL + "/icode-logo.png"}
-            alt="iCode Logo"
-            className="company-logo"
-          />
-        </a>
-        <div className="work-info">
-          <a
-            href="https://icodeschool.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="company-name-link"
-          >
-            <h3>iCode</h3>
-          </a>
-          <h4>Programming Instructor</h4>
-          <p className="work-dates">March 2026 – May 2026</p>
-          <p>
-            Programming Instructor at iCode, teaching students the fundamentals of coding, computational thinking, and problem-solving. Guide learners through hands-on projects in programming and technology while helping them build confidence in STEM. Focus on making complex technical concepts understandable and engaging for younger students.
-          </p>
-        </div>
+      <div className="leadership-grid" aria-label="Leadership">
+        {leadership.map((entry) => (
+          <article className="leadership-card" key={entry.organization}>
+            <p className="mini-label">{entry.role}</p>
+            <h3>{entry.organization}</h3>
+            <p>{entry.description}</p>
+          </article>
+        ))}
       </div>
-
     </section>
   );
 }

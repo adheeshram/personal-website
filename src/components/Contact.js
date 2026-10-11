@@ -3,7 +3,9 @@ import React from "react";
 export default function Contact() {
   return (
     <section id="contact" className="fade-in">
-      <h2>Contact Me</h2>
+      <p className="eyebrow">Let’s connect</p>
+      <h2>Contact</h2>
+      <p className="contact-copy">I’m always glad to talk about engineering, research, or opportunities to contribute.</p>
       <div className="social-links">
         <a
           href="https://github.com/adheeshram"
@@ -13,6 +15,7 @@ export default function Contact() {
           className="social-link github"
         >
           <i className="fab fa-github" aria-hidden="true"></i>
+          <span>GitHub</span>
         </a>
         <a
           href="https://www.linkedin.com/in/adheeshramanath"
@@ -22,6 +25,7 @@ export default function Contact() {
           className="social-link linkedin"
         >
           <i className="fab fa-linkedin" aria-hidden="true"></i>
+          <span>LinkedIn</span>
         </a>
         <a
           href="mailto:adheeshk.ramanath@gmail.com"
@@ -29,8 +33,10 @@ export default function Contact() {
           className="social-link email"
         >
           <i className="fas fa-envelope" aria-hidden="true"></i>
+          <span>Email</span>
         </a>
       </div>
+      <p className="footer-note">© {new Date().getFullYear()} Adheesh Ramanath</p>
     </section>
   );
 }

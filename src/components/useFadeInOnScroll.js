@@ -4,6 +4,11 @@ export default function useFadeInOnScroll() {
   useEffect(() => {
     const faders = document.querySelectorAll(".fade-in");
 
+    if (!("IntersectionObserver" in window)) {
+      faders.forEach((fader) => fader.classList.add("visible"));
+      return undefined;
+    }
+
     const appearOptions = {
       threshold: 0.1,
       rootMargin: "0px 0px -50px 0px",
